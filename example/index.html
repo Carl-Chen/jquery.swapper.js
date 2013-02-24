@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+<html>
+  <head> 
+    <meta charset="UTF-8">
+    <title>jquery.swapper.js</title>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript">google.load("jquery", "1");</script>
+    <script type="text/javascript" src="../jquery.swapper.js"></script>
+    <style type="text/css">  
+      div {
+        width:       100px;
+        height:      100px;
+        text-align:  center;
+        font-size:   24px;
+        font-weight: bold;
+      }
+
+      #box1 {
+        position:         absolute;
+        top:              50px;
+        left:             50px;
+        background-color: red;
+      }
+
+      #box2 {
+        position:         absolute;
+        top:              60px;
+        left:             380px;
+        background-color: blue;
+      }
+    </style>  
+  </head> 
+
+  <body>
+    <script type="text/javascript">
+      $(function() {
+        $(document).on('click', function() {
+          $('#box1').swapper('#box2');
+        });
+      });
+    </script>
+
+    <div id="box1">Box 1</div>
+    <div id="box2">Box 2</div>
+
+  </body> 
+</html>

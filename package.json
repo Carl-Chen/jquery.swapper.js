@@ -1,0 +1,23 @@
+{
+  "name":        "jquery.swapper.js",
+  "version":     "0.2",
+  "description": "The plugin swap element positions by CSS animation.",
+  "author": {
+    "name":  "mako2x",
+    "email": "arekara3nen@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url":  "git://github.com/mako2x/jquery.swapper.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "grunt":                "0.4.0",
+    "grunt-contrib-coffee": "0.4.0",
+    "grunt-contrib-uglify": "0.1.1",
+    "grunt-contrib-watch":  "0.2.0"
+  },
+  "optionalDependencies": {},
+  "license": "MIT",
+  "engines": {}
+}
