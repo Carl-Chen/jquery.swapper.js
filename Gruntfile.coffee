@@ -1,10 +1,11 @@
 module.exports = (grunt) ->
+  grunt.loadNpmTasks 'grunt-coffeelint'
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-uglify'
   grunt.loadNpmTasks 'grunt-contrib-watch'
 
 
-  grunt.registerTask 'build', ['coffee', 'uglify']
+  grunt.registerTask 'build', ['coffeelint', 'coffee', 'uglify']
   grunt.registerTask 'default', ['build']
 
   grunt.initConfig
@@ -19,6 +20,10 @@ module.exports = (grunt) ->
       dist:
         files: ['src/*.coffee']
         tasks: ['build']
+
+    coffeelint:
+      dist:
+        src: ['src/coffee/**/*.coffee']
 
     coffee:
       dist:

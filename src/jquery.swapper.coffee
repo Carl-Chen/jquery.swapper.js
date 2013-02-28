@@ -44,7 +44,11 @@ do ($ = @jQuery or @Zepto) ->
     $src  = @first()
     $dest = $(dest).first()
 
-    return @ if ($src.data('isMoving') is 'true') or ($dest.data('isMoving') is 'true')
+    unless $src.length and $dest.length
+      return @
+
+    if ($src.data('isMoving') is 'true') or ($dest.data('isMoving') is 'true')
+      return @
 
     settings = $.extend
       duration: 500
